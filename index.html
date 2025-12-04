@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Invitación 15 Años</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Import map (for future JS libraries, currently unused but ready) -->
+  <script type="importmap">
+  {
+    "imports": { }
+  }
+  </script>
+  <!-- Fuentes elegantes -->
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link
++    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap"
++    rel="stylesheet"
++  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body style="background-color: '9fc6fc';">
+  <div class="invitation-wrapper">
+
+    <!-- Fondo decorativo -->
+    <div class="background-layer background-layer-1"></div>
+    <div class="background-layer background-layer-2"></div>
+    <canvas id="sparkleCanvas" class="sparkle-canvas" aria-hidden="true"></canvas>
+
+    <main class="card">
+
+      <!-- PORTADA -->
+      <section style=" background-image: url('/img/2.jpeg.jpeg');background-size: cover;background-position: center;" id="portada" class="section section-hero parallax" data-speed="0.3">
+        <div class="hero-inner fade-in">
+          <div class="hero-top-label">Mis 15 Años</div>
+
+          <h1 class="hero-name">Tatiana</h1>
+
+          <p class="hero-phrase">
+            ¡Es mi noche mas esperada,
+            y quiero que la compartas conmigo!.
+          </p>
+
+          <div class="hero-divider"></div>
+
+          <div class="hero-date-highlight">
+            <span class="day">Sábado</span>
+            <span class="date">10 · Enero · 2026</span>
+            <span class="date">21:30hs</span>
+          </div>
+
+       
+
+          <div class="hero-scroll-indicator">
+            <span class="scroll-icon"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOTO DESTACADA ANIMADA -->
+      <section id="presentacion" class="section section-featured-photo">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-star"></span>
+          </div>
+          <h2>Un adelanto especial</h2>
+          <p>
+            Una imagen que guarda la ilusión de este gran día.
+          </p>
+        </div>
+
+        <div class="featured-photo-card fade-in">
+          <!-- Reemplaza esta imagen por una foto destacada de la quinceañera -->
+          <div class="featured-photo-inner">
+            <img src="/img/1.jpeg.jpeg" alt="Foto especial de la quinceañera" loading="lazy" />
+            <div class="featured-photo-overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTADOR REGRESIVO -->
+      <section id="contador" class="section section-countdown">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-clock"></span>
+          </div>
+          <h2>Falta muy poco</h2>
+          <p>
+            Cuenta regresiva para el gran día.
+          </p>
+        </div>
+
+        <div class="countdown fade-in">
+          <div class="countdown-item">
+            <span id="days" class="count-number">00</span>
+            <span class="count-label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span id="hours" class="count-number">00</span>
+            <span class="count-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes" class="count-number">00</span>
+            <span class="count-label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds" class="count-number">00</span>
+            <span class="count-label">Segundos</span>
+          </div>
+        </div>
+        <p class="countdown-note fade-in">
+          Te espero para celebrar este momento inolvidable.
+        </p>
+      </section>
+
+      <!-- UBICACIÓN -->
+      <section id="ubicacion" class="section section-location">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-location"></span>
+          </div>
+          <h2>Ubicación</h2>
+          <p>
+            Lugar de celebración
+          </p>
+        </div>
+
+        <div class="location-cards fade-in">
+          <article class="location-card">
+            <h3>Recepción</h3>
+            <p class="location-name">Salón de eventos Scorpion</p>
+            <p class="location-address">Av. del Portezuelo, D5700 San Luis</p>
+            <a href="https://www.google.com/maps/place/Sal%C3%B3n+de+eventos+Scorpion/@-33.252541,-66.264913,16z/data=!4m6!3m5!1s0x95d43f570cb59c87:0xba6a3faabc5968b7!8m2!3d-33.253133!4d-66.2649771!16s%2Fg%2F11kptnd3y0?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-outline">
+              Ver en Maps
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- FRASES / POEMA -->
+      <section style=" background-image: url('/img/2.jpeg.jpeg');background-size: cover;background-position: center;" id="poema" class="section section-quotes">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-heart"></span>
+          </div>
+          
+        </div>
+
+        <div class="quote-card soft fade-in">
+          <p class="quote-text">
+            “La vida está hecha de instantes,
+            y este será uno de los más especiales.
+            Gracias por compartirlo conmigo.”
+          </p>
+        </div>
+
+        <div class="quote-card soft fade-in">
+          <p class="quote-text">
+            “Hoy dejo atrás mis sueños de niña,
+            para comenzar a escribir
+            las páginas más lindas de mi historia.”
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERÍA (OPCIONAL) -->
+      <section id="galeria" class="section section-gallery">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-gallery"></span>
+          </div>
+          <h2>Pequeños adelantos</h2>
+          <p>
+            Algunos momentos que inspiran esta noche tan especial.
+          </p>
+        </div>
+
+        <div class="gallery-slider fade-in" data-autoplay="true">
+          <div class="gallery-track">
+            <!-- Reemplaza los src de ejemplo con tus propias imágenes -->
+            <div class="gallery-slide">
+              <figure class="gallery-item">
+                <img
+                  src="/img/5.jpeg"
+                  alt="Luz suave y celebración" loading="lazy" />
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="gallery-item">
+                <img
+                  src="/img/3.jpeg.jpeg"
+                  alt="Ambiente de fiesta elegante" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+
+          <button class="gallery-nav gallery-prev" aria-label="Foto anterior">
+            ‹
+          </button>
+          <button class="gallery-nav gallery-next" aria-label="Foto siguiente">
+            ›
+          </button>
+
+          <div class="gallery-dots" aria-hidden="true">
+            <button class="gallery-dot is-active"></button>
+            <button class="gallery-dot"></button>
+            <button class="gallery-dot"></button>
+          </div>
+        </div>
+      </section>
+
+         <!-- REGALO -->
+      <section id="regalo" class="section section-gift">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-gift"></span>
+          </div>
+          <h2>Regalo</h2>
+        </div>
+
+        <div class="gift-card fade-in">
+          <p class="gift-text">
+            Tu presencia es el mejor regalo, pero si lo deseas puedes hacerme el regalo
+            que quieras. Si te sirve:
+          </p>
+          <div class="gift-alias" style="justify-content: center">
+            <span class="gift-label">ALIAS:</span>
+            <span class="gift-value">Tatianaaguilera15</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFIRMACIÓN DE ASISTENCIA -->
+      <section id="rsvp" class="section section-rsvp">
+        <div class="section-header fade-in">
+          <div class="icon-badge">
+            <span class="icon icon-rsvp"></span>
+          </div>
+          <h2>Confirmá tu asistencia</h2>
+          <p>
+            Tu presencia es el mejor regalo.
+          </p>
+        </div>
+
+        <div class="rsvp-actions fade-in">
+          <!-- Reemplaza el número de WhatsApp y el mensaje predefinido -->
+          <a class="btn-primary"
+            href="https://wa.me/5492664651942?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%2015%20años%20de%20Tatiana."
+            target="_blank">
+            Confirmar por WhatsApp
+          </a>
+
+     
+        </div>
+      </section>
+
+      <!-- PIE -->
+      <footer class="section section-footer">
+        <p class="footer-text">
+          Con amor, <span class="footer-name">Tatiana</span>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Reproductor de música de fondo -->
+  <div class="music-player">
+    <button class="music-toggle" aria-label="Reproducir o pausar música">
+      ♪
+    </button>
+    <audio id="backgroundMusic" loop>
+      <!-- Reemplaza el nombre del archivo por tu mp3 en la carpeta 'razi' -->
+      <source src="/1.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>

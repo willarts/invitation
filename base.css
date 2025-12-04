@@ -1,0 +1,140 @@
+:root {
+  --color-bg: #9fc6fc;
+  --color-bg-soft: rgba(255, 255, 255, 0.7);
+  --color-card: rgba(255, 255, 255, 0.9);
+  --color-primary: #a8d9ff;      /* celeste pastel */
+  --color-primary-strong: #5fb3ff;
+  --color-accent-gold: #d4af37;  /* dorado suave */
+  --color-accent-silver: #c0c8d8;
+  --color-text-main: #28354b;
+  --color-text-soft: #5d6b82;
+  --shadow-soft: 0 18px 45px rgba(15, 35, 52, 0.12);
+  --radius-card: 22px;
+  --transition-fast: 0.25s ease;
+  --transition-med: 0.4s ease;
+  --font-main: "Cormorant Garamond", "Times New Roman", serif;
+  --font-script: "Great Vibes", "Segoe Script", cursive;
+}
+
+/* RESET BÁSICO */
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(circle at 0 0, #e3f1ff 0, #f8fbff 45%, #eef4ff 100%);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+}
+
+/* WRAPPER PRINCIPAL */
+.invitation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* FONDOS DECORATIVOS */
+.background-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 0;
+}
+.background-layer-1 {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.95) 0, transparent 55%),
+    radial-gradient(circle at 100% 20%, rgba(168, 217, 255, 0.3) 0, transparent 55%),
+    radial-gradient(circle at 0% 90%, rgba(255, 255, 255, 0.9) 0, transparent 55%);
+}
+.background-layer-2 {
+  background:
+    radial-gradient(circle at 80% 80%, rgba(192, 200, 216, 0.25) 0, transparent 55%),
+    radial-gradient(circle at 10% 50%, rgba(212, 175, 55, 0.09) 0, transparent 45%);
+  mix-blend-mode: screen;
+}
+
+/* LIENZO DE BRILLOS */
+.sparkle-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* TARJETA PRINCIPAL */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0.92)
+    );
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  backdrop-filter: blur(22px);
+}
+
+/* SECCIONES GENERALES */
+.section {
+  position: relative;
+  padding: 24px 20px;
+}
+.section:not(:last-child) {
+  border-bottom: 1px solid rgba(192, 200, 216, 0.34);
+}
+
+/* ANIMACIONES SCROLL - FADE IN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--transition-med), transform var(--transition-med);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PARALLAX */
+.parallax {
+  will-change: transform;
+}
+
+/* RESPONSIVE BÁSICO (POR SI SE ABRE EN PANTALLA MÁS GRANDE) */
+@media (min-width: 560px) {
+  .invitation-wrapper {
+    padding: 32px 12px;
+  }
+  .card {
+    border-radius: 28px;
+  }
+  .details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .location-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,43 @@
+/* BOTONES */
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #a8d9ff, #5fb3ff);
+  color: #0f2337;
+  box-shadow: 0 10px 22px rgba(11, 76, 130, 0.23);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(11, 76, 130, 0.32);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 12px rgba(11, 76, 130, 0.35);
+}
+.btn-outline {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-main);
+  border: 1px solid rgba(168, 217, 255, 0.9);
+  box-shadow: 0 6px 16px rgba(15, 35, 52, 0.15);
+}
+.btn-outline:hover {
+  background: rgba(168, 217, 255, 0.16);
+  transform: translateY(-1px);
+}
+.btn-outline:active {
+  transform: translateY(1px);
+}
+

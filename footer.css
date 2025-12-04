@@ -1,0 +1,23 @@
+/* PIE */
+.section-footer {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(240, 247, 255, 0.9)
+  );
+}
+.footer-text {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+.footer-name {
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+

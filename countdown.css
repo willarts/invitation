@@ -1,0 +1,33 @@
+/* CONTADOR */
+.section-countdown {
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.countdown-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 8px 6px;
+  min-width: 54px;
+  border: 1px solid rgba(168, 217, 255, 0.25);
+  box-shadow: 0 7px 18px rgba(20, 56, 95, 0.09);
+}
+.count-number {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+.count-label {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-soft);
+}
+.countdown-note {
+  font-size: 12px;
+  color: var(--color-text-soft);
+}
+
